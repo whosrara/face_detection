@@ -35,7 +35,7 @@ for filename in os.listdir(data_dir):
         resized_face = cv2.resize(face, (50, 50))
 
         # Flatten and reshape the resized face to a 1D array
-        flattened_face = resized_face.flatten().reshape(1, -1)
+        flattened_face = resized_face.flatten().reshape(-1)
 
         # Append the flattened face to the faces list
         faces.append(flattened_face)
@@ -52,6 +52,7 @@ camera = cv2.VideoCapture(0)
 
 print('Shape of Faces matrix --> ', faces.shape)
 knn = KNeighborsClassifier(n_neighbors=4)
+print (len(faces), len(labels))
 knn.fit(faces, labels)
 
 while True:
