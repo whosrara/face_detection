@@ -23,12 +23,12 @@ def compute_ssim(img1, img2):
     img1 = cv2.resize(img1, (100, 100))
     img2 = cv2.resize(img2, (100, 100))
 
-    target_file_name1 = 'faces/' +  ' - ' + str(time.time()) + '.jpg'
+    target_file_name1 = 'compare-faces/' +  ' - ' + str(time.time()) + '.jpg'
     cv2.imwrite(
         target_file_name1,
         img1,
     )
-    target_file_name2 = 'faces/' +  ' - ' + str(time.time()) + '.jpg'
+    target_file_name2 = 'compare-faces/' +  ' - ' + str(time.time()) + '.jpg'
     cv2.imwrite(
         target_file_name2,
         img2,
