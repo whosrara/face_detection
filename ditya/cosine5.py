@@ -76,43 +76,24 @@ def compare_images(image1_path, image2_path):
 
 # # Load the images
 # # Tes 1
-# image1_path = '../dataset/ditya/0106.png'
-# image2_path = '../dataset/zidni/0109.png'
+# image1_path = './dataset/ditya/0106.png'
+# image2_path = './dataset/zidni/0109.png'
 
 # # Tes 2
-# # image1_path = '../dataset/rara/User.1.1.jpg'
-# # image2_path = '../dataset/rara/User.1.3.jpg'
+# # image1_path = './dataset/rara/User.1.1.jpg'
+# # image2_path = './dataset/rara/User.1.3.jpg'
 
 # # Tes 3
-# # image1_path = '../dataset/ika/User.2.5.jpg'
-# # image2_path = '../dataset/ika/User.2.37.jpg'
+# # image1_path = './dataset/ika/User.2.5.jpg'
+# # image2_path = './dataset/ika/User.2.37.jpg'
 
 # # Tes 4
-# # image1_path = '../dataset/rara/User.1.5.jpg'
-# # image2_path = '../dataset/ika/User.2.37.jpg'
+# # image1_path = './dataset/rara/User.1.5.jpg'
+# # image2_path = './dataset/ika/User.2.37.jpg'
 
 # # Tes 5
-# # image1_path = '../dataset/ditya/0104.png'
-# # image2_path = '../dataset/ditya/0105.png'
+image1_path = './dataset/ditya/0104.png'
+image2_path = './dataset/ditya/0105.png'
 
-# image1 = cv2.imread(image1_path)
-# image2 = cv2.imread(image2_path)
-
-# # Detect and crop faces
-# face1 = detect_and_crop_face(image1, face_cascade)
-# face2 = detect_and_crop_face(image2, face_cascade)
-
-# # Results variable
-# result = {}
-
-# # Compare the faces if both were detected and cropped
-# if face1 is not None and face2 is not None:
-#     ssim_index = compute_ssim(face1, face2)
-#     similarity_percentage = ssim_index * 100
-#     result["Similarity Percentage"] = similarity_percentage
-#     result["Are Faces Similar"] = "Yes" if similarity_percentage > 50 else "No"
-# else:
-#     result["Error"] = "Could not detect a face in one or both of the images. Please try with different images."
-
-# # Print the result
-# print(result)
+result = compare_images(image1_path, image2_path)
+print(result)
