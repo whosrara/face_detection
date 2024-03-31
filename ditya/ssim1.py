@@ -48,8 +48,11 @@ def compute_ssim(img1, img2):
 
 
 def compare_images(image1_path, image2_path):
-    image1 = cv2.imread(image1_path)
-    image2 = cv2.imread(image2_path)
+    # image1 = cv2.imread(image1_path)
+    # image2 = cv2.imread(image2_path)
+
+    image1 = image1_path
+    image2 = image2_path
 
     face1 = detect_and_crop_face(image1, face_cascade)
     face2 = detect_and_crop_face(image2, face_cascade)
@@ -92,8 +95,8 @@ def compare_images(image1_path, image2_path):
 # # image2_path = './dataset/ika/User.2.37.jpg'
 
 # # Tes 5
-image1_path = './dataset/ditya/0104.png'
-image2_path = './dataset/ditya/0105.png'
+# image1_path = './dataset/ditya/0104.png'
+# image2_path = './dataset/ditya/0105.png'
 
-result = compare_images(image1_path, image2_path)
-print(result)
+# result = compare_images(image1_path, image2_path)
+# print(result)
